@@ -12,14 +12,14 @@ DFT -> operação que converte um sinal de domínio do tempo em seu corresponden
 import matplotlib.pyplot as plt
 import numpy as np
 
-Fs = 1000  # taxa de amostragem
+Fs = 1500  # taxa de amostragem
 Ts = 1.0 / Fs  # periodo de amostragem
-t = np.arange(0, 1, Ts)  # vetor de tempo que represente o tempo de amostragem do sinal que será analisado pela DFT
+t = np.arange(0, 0.02, Ts)  # vetor de tempo que represente o tempo de amostragem do sinal que será analisado pela DFT
 
 f1 = 100  # frequencia do sinal 1
 x1_n = np.sin(2 * np.pi * f1 * t + 0)
 
-f2 = 1000  # frequencia do sinal 2
+f2 = 300  # frequencia do sinal 2
 x2_n = np.sin(2 * np.pi * f2 * t + np.pi)
 
 x_n = x1_n + x2_n
