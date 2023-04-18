@@ -12,6 +12,10 @@ DFT -> operação que converte um sinal de domínio do tempo em seu corresponden
 import matplotlib.pyplot as plt
 import numpy as np
 
+# implementação da função abs do python, calcula o valor absoluto dos elementos complexos do array z
+def magn(z):
+    return np.sqrt(z.real**2 + z.imag**2)
+
 Fs = 1500  # taxa de amostragem
 Ts = 1.0 / Fs  # periodo de amostragem
 t = np.arange(0, 0.02, Ts)  # vetor de tempo que represente o tempo de amostragem do sinal que será analisado pela DFT
@@ -44,7 +48,7 @@ fig, ax = plt.subplots(2, 1)
 ax[0].plot(t, x_n)
 ax[0].set_xlabel('Tempo')
 ax[0].set_ylabel('Amplitude')
-ax[1].plot(frq, np.abs(X), 'r')
+ax[1].plot(frq, magn(X), 'r')
 ax[1].set_xlabel('Freq (Hz)')
 ax[1].set_ylabel('|X(freq)|')
 
