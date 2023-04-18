@@ -15,7 +15,7 @@ import numpy as np
 # implementação da função abs do python, calcula o valor absoluto dos elementos complexos do array z
 def magn(z):
     #return np.sqrt(z.real**2 + z.imag**2)
-    return ((z.real**2 + z.imag**2)(1/2))
+    return ((z.real**2 + z.imag**2)*(1/2))
 
 Fs = 1500  # taxa de amostragem
 Ts = 1.0 / Fs  # periodo de amostragem
