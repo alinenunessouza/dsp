@@ -19,6 +19,8 @@ def magn(z):
 
 Fs = 1500  # taxa de amostragem
 Ts = 1.0 / Fs  # periodo de amostragem
+
+# arange cria um array com valores igualmente espaçados dentro de um intervalo especificado
 t = np.arange(0, 0.02, Ts)  # vetor de tempo que represente o tempo de amostragem do sinal que será analisado pela DFT
 
 f1 = 100  # frequencia do sinal 1
