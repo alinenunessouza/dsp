@@ -6,6 +6,8 @@ Para executar localmente
 pip install --upgrade pip
 pip install matplotlib
 
+Comparação da DFT implementada e a FFT do numpy:
+
 
 1) No somatório de sinais, ao colocar somente o plot do primeiro sinal, um seno, podemos ver o seno na saída 
 ![image](https://user-images.githubusercontent.com/72985725/231164692-c702b43f-b44b-402c-b5bb-576cf060b923.png)
