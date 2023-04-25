@@ -7,7 +7,7 @@ DFT (Discrete Fourier Transform): operação que converte um sinal de domínio d
 - Cálculo: decomposição de um sinal discreto em uma soma ponderada de funções sinusoidais complexas com frequências discretas
 - fórmula geral: X[k] = somatório de (x[n] * exp(-2pijkn/N))
 onde x[n] é o sinal de entrada, X[k] é o valor da DFT no índice k, N é o tamanho do sinal e j é a unidade imaginária (j² = -1)
-- Propriedade simetria conjugada complexa: os valores da transformada para frequências acima da metade do limite superior do sinal são espelhados em relação à metade inferior.
+- Propriedade de simetria conjugada: os valores da transformada para frequências acima da metade do limite superior do sinal são espelhados em relação à metade inferior.
 
 FFT (Fast Fourier transform): algoritmo que computa a DFT de forma mais eficiente do que a implementação direta da fórmula da DFT.
 
