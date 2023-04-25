@@ -4,6 +4,10 @@ Created on 2023
 Implementação de um somatório de DFT  e comparação com uma fft do numpy
 
 DFT (Discrete Fourier Transform): operação que converte um sinal de domínio do tempo em seu correspondente espectro de frequência.
+- Cálculo: decomposição de um sinal discreto em uma soma ponderada de funções sinusoidais complexas com frequências discretas
+- fórmula geral: X[k] = somatório de (x[n] * exp(-2pijkn/N))
+onde x[n] é o sinal de entrada, X[k] é o valor da DFT no índice k, N é o tamanho do sinal e j é a unidade imaginária (j² = -1)
+- Propriedade simetria conjugada complexa: os valores da transformada para frequências acima da metade do limite superior do sinal são espelhados em relação à metade inferior.
 
 FFT (Fast Fourier transform): algoritmo que computa a DFT de forma mais eficiente do que a implementação direta da fórmula da DFT.
 
@@ -41,12 +45,14 @@ frq = frq[range(int(n/2))]  # apenas um lado
 
 X = np.zeros(int(n/2), dtype=np.complex64)
 
-for m in range(0, int(n/2)):
+# calcula a DFT de um sinal discreto x_n de tamanho n, utilizando a abordagem direta de somatórios
+# calcula os valores da DFT nos índices m que variam de 0 a n/2-1, a "metade positiva" da DFT
+for m in range(0, int(n/2)): # percorre os valores de m que variam de 0 a n/2-1: está percorrendo apenas a metade positiva da DFT, e os valores para a metade negativa são calculados usando a simetria conjugada complexa 
     mysumm = 0
-    for nn in range(0, n):
+    for nn in range(0, n): # para cada valor de m, é calculada a soma ponderada de x_n com as funções senoidais e cossenoidais correspondentes a essa frequência m
         mysumm += x_n[nn] * (np.cos(2 * np.pi * nn * m / n) -
-                             1j * np.sin(2 * np.pi * nn * m / n))
-    X[m] = mysumm
+                             1j * np.sin(2 * np.pi * nn * m / n)) # para cada valor de n, é calculada a contribuição da função senoidal e cossenoidal correspondente a essa frequência m, usando as funções np.cos e np.sin
+    X[m] = mysumm # valor resultante da soma ponderada é atribuído ao índice m do vetor de saída X, que contém os valores calculados da DFT
 
 fig, ax = plt.subplots(4, 1)
 ax[0].plot(t, x_n)
