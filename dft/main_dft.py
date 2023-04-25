@@ -1,8 +1,6 @@
 """
 Created on 2023
 
-@author: Aline Nunes de Souza
-
 Implementação de um somatório de DFT (Discrete Fourier Transform)
 
 DFT -> operação que converte um sinal de domínio do tempo em seu correspondente espectro de frequência
@@ -52,7 +50,7 @@ fig, ax = plt.subplots(2, 1)
 ax[0].plot(t, x_n)
 ax[0].set_xlabel('Tempo')
 ax[0].set_ylabel('Amplitude')
-ax[1].plot(frq, magn(X), 'r')
+ax[1].plot(frq, 2 * magn(X), 'r')
 ax[1].set_xlabel('Freq (Hz)')
 ax[1].set_ylabel('|X(freq)|')
 
