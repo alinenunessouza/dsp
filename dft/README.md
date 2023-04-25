@@ -1,14 +1,18 @@
-![image](https://user-images.githubusercontent.com/72985725/231176940-e11f4d14-bead-47b8-91d0-0ec93d392a65.png)
-https://www.dspguide.com/ch13/4.htm
+## Como executar o projeto localmente
 
-Para executar localmente
-
+```python
 pip install --upgrade pip
 pip install matplotlib
+```
 
-Comparação da DFT implementada e a FFT do numpy:
+- *main.py*: arquivo com a implementação da dft sem a função pronta do numpy e um plot da fft do nympy para comparação
+- *main_dft.py*: arquivo com somente a implementação da dft sem a função pronta do numpy
+- *main_test.py*: arquivo de teste para verificar o comportamento das harmônicas
 
+## Comparação da DFT implementada e a FFT do numpy:
+<img align="center" alt="Csharp" height="400" width="400" src="https://user-images.githubusercontent.com/72985725/234274372-1f32b2e8-fd94-431c-9491-e7469b5d1d2a.png">
 
+## Testes para analisar e validar o comportamento da DFT implementada:
 1) No somatório de sinais, ao colocar somente o plot do primeiro sinal, um seno, podemos ver o seno na saída 
 ![image](https://user-images.githubusercontent.com/72985725/231164692-c702b43f-b44b-402c-b5bb-576cf060b923.png)
 
