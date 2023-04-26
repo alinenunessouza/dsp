@@ -10,7 +10,7 @@ pip install matplotlib
 - *main_test.py*: arquivo de teste para verificar o comportamento das harmônicas
 
 ## Comparação da DFT implementada e a FFT do numpy:
-<img align="center" alt="Csharp" height="400" width="400" src="https://user-images.githubusercontent.com/72985725/234274372-1f32b2e8-fd94-431c-9491-e7469b5d1d2a.png">
+<img align="center" alt="Csharp" height="400" width="400" src="https://github.com/alinenunessouza/dsp/blob/main/dft/Comparacao_DFT_vs_FFT.png">
 
 ## Testes para analisar e validar o comportamento da DFT implementada:
 1) No somatório de sinais, ao colocar somente o plot do primeiro sinal, um seno, podemos ver o seno na saída 
